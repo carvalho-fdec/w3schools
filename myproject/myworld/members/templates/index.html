@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="col-md-12">
+        <h1>Membros</h1>
+        <div class="container">
+            <p>
+                <a href="add">Adiciona membro</a>
+            </p>
+        </div>    
+    <div class="col-md-12">
+        <div class="container">
+            <p>
+                <! -- show the member's details in a table with bootstrap-->
+
+                <table class="table table-striped">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Zipcode</th>
+                        <th>Country</th>
+                        <th>created_at</th>
+                        <th>updated_at</th>                      
+                    </tr>
+
+                    {% for x in mymembers %}
+                        <tr>
+                            <td>{{ x.first_name }}</td>
+                            <td>{{ x.last_name }}</td>
+                            <td>{{ x.email }}</td>
+                            <td>{{ x.phone }}</td>
+                            <td>{{ x.address }}</td>
+                            <td>{{ x.city }}</td>
+                            <td>{{ x.state }}</td>
+                            <td>{{ x.zipcode }}</td>
+                            <td>{{ x.country }}</td>
+                            <td>{{ x.created_at }}</td>
+                            <td>{{ x.updated_at }}</td>
+                        </tr>
+                    {% endfor %}
+            </p>
+        </div>
+   
+</body>
+</html>

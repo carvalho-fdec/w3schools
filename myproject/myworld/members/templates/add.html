@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+    <style>
+        input {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add member</h1>
+
+    <form action="addrecord/" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="first_name">
+            <label for="last_name">Last Name</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" placeholder="last_name">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email" name="email" placeholder="email">
+            <label for="phone">Phone</label>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="phone">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" name="address" placeholder="address">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" name="city" placeholder="city">
+            <label for="state">State</label>
+            <input type="text" class="form-control" id="state" name="state" placeholder="state">
+            <label for="zipcode">Zipcode</label>
+            <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="zipcode">
+            <label for="country">Country</label>
+            <input type="text" class="form-control" id="country" name="country" placeholder="country">
+
+        </div>
+        <br><br><input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
