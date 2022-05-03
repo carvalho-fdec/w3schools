@@ -49,3 +49,29 @@ def addrecord(request):
     member.save()
     #return HttpResponse("Record added successfully")
     return HttpResponseRedirect(reverse('index'))
+
+def delete(request, id):
+    member = Members.objects.get(id=id)
+    member.delete()
+    return HttpResponseRedirect(reverse('index'))
+
+def update(request, id):
+    mymember = Members.objects.get(id=id)
+    template = loader.get_template('update.html')
+    context = { 'mymember': mymember,}
+    return HttpResponse(template.render(context, request))
+
+def updaterecord(request, id):
+    member = Members.objects.get(id=id)
+    member.first_name = request.POST['first_name']
+    member.last_name = request.POST['last_name']
+    member.email = request.POST['email']
+    member.phone = request.POST['phone']
+    member.address = request.POST['address']
+    member.city = request.POST['city']
+    member.state = request.POST['state']
+    member.zipcode = request.POST['zipcode']
+    member.country = request.POST['country']
+    member.save()
+    return HttpResponseRedirect(reverse('index'))
+

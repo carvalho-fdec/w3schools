@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>members</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        th
+        {
+            text-align: center;
+        }
+        td
+        {
+            background-color: white;
+        }
+    </style>
 </head>
 <body>
     <div class="col-md-12">
@@ -14,14 +24,12 @@
             <p>
                 <a href="add">Adiciona membro</a>
             </p>
-        </div>    
-    <div class="col-md-12">
-        <div class="container">
             <p>
                 <! -- show the member's details in a table with bootstrap-->
 
                 <table class="table table-striped">
                     <tr>
+                        <th>ID</th>
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Email</th>
@@ -32,11 +40,13 @@
                         <th>Zipcode</th>
                         <th>Country</th>
                         <th>created_at</th>
-                        <th>updated_at</th>                      
+                        <th>updated_at</th>
+                        <th>Actions</th>
                     </tr>
 
                     {% for x in mymembers %}
                         <tr>
+                            <td><a href="update/{{x.id}}">{{x.id}}</a></td>
                             <td>{{ x.first_name }}</td>
                             <td>{{ x.last_name }}</td>
                             <td>{{ x.email }}</td>
@@ -48,10 +58,12 @@
                             <td>{{ x.country }}</td>
                             <td>{{ x.created_at }}</td>
                             <td>{{ x.updated_at }}</td>
+                            <td align="center"><a href="delete/{{x.id}}">del</a></td>
                         </tr>
                     {% endfor %}
+                </table>
             </p>
         </div>
-   
+    </div>
 </body>
 </html>

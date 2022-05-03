@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- show data member to update -->
+    <form action="updaterecord/{{mymember.id}}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <div class="col-md-6">
+            <h1>Update member</h1>
+            <label for="first_name">First Name</label>
+            <input class="form-control" name="first_name" value="{{mymember.first_name}}">
+            <label for="last_name">Last Name</label>
+            <input class="form-control" name="last_name" value="{{mymember.last_name}}">
+            <label for="email">Email</label>
+            <input class="form-control" name="email" value="{{mymember.email}}">
+            <label for="phone">Phone</label>
+            <input class="form-control" name="phone" value="{{mymember.phone}}">
+            <label for="address">Address</label>
+            <input class="form-control" name="address" value="{{mymember.address}}">
+            <label for="city">City</label>
+            <input class="form-control" name="city" value="{{mymember.city}}">
+            <label for="state">State</label>
+            <input class="form-control" name="state" value="{{mymember.state}}">
+            <label for="zipcode">Zipcode</label>
+            <input class="form-control" name="zipcode" value="{{mymember.zipcode}}">
+            <label for="country">Country</label>
+            <input class="form-control" name="country" value="{{mymember.country}}">
+            </div>
+        </div>
+    
+        <div class="col-md-12">
+            <br><input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>
