@@ -14,7 +14,7 @@ def index(request):
     #return HttpResponse(template.render())
     mymembers = Members.objects.all().values()
     template = loader.get_template('index.html')
-    context = { 'mymembers': mymembers,}
+    context = { 'mymembers': mymembers}
     return HttpResponse(template.render(context, request))   
     #output = ""
     #for x in mymembers:
