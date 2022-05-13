@@ -9,5 +9,7 @@ def passcheck(request):
     template = loader.get_template('passcheck.html')
     return HttpResponse(template.render())
 
+def logincheck(request):
+    
 
-
+def adduser(request):
