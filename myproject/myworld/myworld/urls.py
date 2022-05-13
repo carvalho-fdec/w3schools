@@ -18,6 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('members/', include('members.urls')),
+    path('members/', include('members.urls')), #crud members
     path('', include('members.urls')),
+    path('pass/', include('pass.urls')), #login
 ]
