@@ -9,6 +9,7 @@
 </head>
 <body>
     <!-- create a login html page-->
+    
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
@@ -19,7 +20,7 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-lg-12">
-                                <form id="login-form" action="logincheck/" method="post" role="form" style="display: block;">
+                                <form action="logincheck/" method="post">
                                     {% csrf_token %}
                                     <div class="form-group">
                                         <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
